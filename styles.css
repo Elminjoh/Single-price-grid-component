@@ -1,0 +1,68 @@
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: hsl(204, 43%, 93%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+.design-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 375px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+/* Top Container */
+.top-container {
+    background-color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+
+/* bottmleft-container */
+.bottomleft-container {
+    background-color: hsl(195, 74%, 62%);
+    padding: 2rem;
+    text-align: center;
+  }
+
+/* bottomright-container */
+.bottomright-container {
+    background-color: hsl(195, 76%, 69%);
+    padding: 2rem;
+    text-align: center;
+  }
+
+.bottomleft-container button {
+    background-color: rgb(142, 175, 10);
+    color: hsl(180, 20%, 98%);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100%;;
+    }
+    
+.bottomleft-container button:hover {
+        background-color: rgb(142, 175, 10);
+  }
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .design-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two equal columns for bottom containers */
+      grid-template-rows: auto 1fr; /* One row for top container, and one row for bottom left and right */
+      max-width: 1440px;
+    }
+    .top-container {
+      grid-column: span 2; /* Ensures the top container spans both columns */
+    }
+    .bottomleft-container, .bottomright-container {
+      padding: 3rem;
+    }
+}
